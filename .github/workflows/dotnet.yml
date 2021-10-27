@@ -28,7 +28,12 @@ jobs:
       working-directory: ./Test.BusinessLogic
     - name: Build
       run: dotnet build --no-restore
+      working-directory: ./App.BusinessLogic
+    - name: Build Test Project
+      run: dotnet build --no-restore
+      working-directory: ./Test.BusinessLogic
     - name: Test
       run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage"
+      working-directory: ./Test.BusinessLogic
     - name: CodeCov
       uses: codecov/codecov-action@v1.5.2
