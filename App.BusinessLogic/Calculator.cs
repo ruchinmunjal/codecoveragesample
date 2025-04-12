@@ -7,6 +7,8 @@ namespace App.BusinessLogic
         public int Add(int one, int two) => one + two;
 
         public int Subtract (int one,int two) => one-two;
+
+        public float Divide(int one, int two) => one/two;
         
     }
 }
